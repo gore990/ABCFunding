@@ -33,4 +33,9 @@
   	<definition name="pwdAfAuth.tiles" extends="main.tiles">
     	<put-attribute name="content" value="/WEB-INF/views/member/pwdAfAuth.jsp" />
    	</definition>
+   	
+	<!-- 투자하기 -->
+  	<definition name="invest.tiles" extends="main.tiles">
+    	<put-attribute name="content" value="/WEB-INF/views/invest/invest.jsp" />
+   	</definition>
 </tiles-definitions>

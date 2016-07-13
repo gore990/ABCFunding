@@ -12,4 +12,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{accountNo}, #{email}, 0, #{accountHolder}
 		)
 	</insert>
+	<update id="changeBalance"
+	    parameterType="com.abcfund.model.dto.ABCAccountDto">
+	    UPDATE	ABC_ACCOUNT
+	    SET		BALANCE = #{balance}
+	    WHERE	ACCOUNT_NO = #{accountNo}
+	</update>
 </mapper>

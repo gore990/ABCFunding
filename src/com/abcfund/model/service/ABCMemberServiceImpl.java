@@ -7,6 +7,7 @@ import com.abcfund.model.dao.ABCAccountDao;
 import com.abcfund.model.dao.ABCMemberDao;
 import com.abcfund.model.dto.ABCAccountDto;
 import com.abcfund.model.dto.ABCMemberDto;
+import com.abcfund.util.ABCUtility;
 
 /**
  * 회원 및 계좌 서비스 클래스
@@ -34,9 +35,15 @@ public class ABCMemberServiceImpl implements ABCMemberService {
 		dao.addMemeber(dto);
 		
 		/* 가상계좌 생성 및 등록 */
-		ABCAccountDto accDto = 
-			new ABCAccountDto("", dto.getEmail(), dto.getName());
+		StringBuilder accountNo = new StringBuilder();
+		accountNo.append(ABCUtility.randomNumber(3));
+		accountNo.append("-");
+		accountNo.append(ABCUtility.randomNumber(6));
+		accountNo.append("-");
+		accountNo.append(ABCUtility.randomNumber(3));
 		
+		ABCAccountDto accDto = 
+			new ABCAccountDto(accountNo.toString(), dto.getEmail(), dto.getName());		
 		accDao.addAccount(accDto);
 	}
 	
