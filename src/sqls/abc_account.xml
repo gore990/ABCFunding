@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ABCAccount"> 
+	<insert id="addAccount"
+	    parameterType="com.abcfund.model.dto.ABCAccountDto">
+	    INSERT INTO ABC_ACCOUNT(
+			ACCOUNT_NO, EMAIL, BALANCE, ACCOUNT_HOLDER
+		)
+		VALUES(
+			#{accountNo}, #{email}, 0, #{accountHolder}
+		)
+	</insert>
+</mapper>

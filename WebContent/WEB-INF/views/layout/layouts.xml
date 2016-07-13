@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition name="main.tiles" template="/WEB-INF/views/layout/layouts-tiles.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/layout/main.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	</definition>
+	
+	<!-- 회원가입 -->
+	<definition name="regi.tiles" extends="main.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/member/regi.jsp" />
+	</definition>
+	
+	<!-- 회원가입 완료 -->
+	<definition name="regiSuc.tiles" extends="main.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/member/regiSuc.jsp" />
+	</definition>
+	
+	<!-- 로그인 -->
+	<definition name="login.tiles" extends="main.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/member/login.jsp" />
+	</definition>
+	
+	<!-- 비밀번호 찾기 -->
+	<definition name="searchpwd.tiles" extends="main.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/member/searchpwd.jsp" />
+	</definition>
+	
+	<!-- 인증 이메일을 통한 비밀변호 변경 -->
+  	<definition name="pwdAfAuth.tiles" extends="main.tiles">
+    	<put-attribute name="content" value="/WEB-INF/views/member/pwdAfAuth.jsp" />
+   	</definition>
+</tiles-definitions>

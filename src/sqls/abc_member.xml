@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ABCMember">
+	<insert id="addMember" parameterType="com.abcfund.model.dto.ABCMemberDto">
+	    INSERT INTO ABC_MEMBER
+	    (EMAIL,PWD,NAME,BIRTH,GENDER,CREDIT_RATING,
+	    LOAN_COUNT,INVEST_COUNT,GRADE,AUTH_CODE)
+	    VALUES(#{email}, #{pwd}, #{name}, #{birth}, #{gender}, #{creditRating}, 0,0,0, #{authCode})
+	</insert>
+	<update id="doAuthCode" parameterType="com.abcfund.model.dto.ABCMemberDto">
+	    UPDATE 	ABC_MEMBER
+	    SET		GRADE = 1
+	    WHERE 	EMAIL = #{email} AND AUTH_CODE = #{authCode}
+	</update>
+	<select id="login"
+	    parameterType="com.abcfund.model.dto.ABCMemberDto"
+	    resultType="java.lang.Object">
+	 	SELECT 	EMAIL,PWD,NAME,BIRTH,GENDER,CREDIT_RATING,
+	    		LOAN_COUNT,INVEST_COUNT,GRADE,AUTH_CODE
+	    FROM 	ABC_MEMBER
+	    WHERE 	EMAIL = #{email} AND PWD = #{pwd}
+	</select>
+	<update id="changePwd"
+	    parameterType="com.abcfund.model.dto.ABCMemberDto">
+		UPDATE	ABC_MEMBER
+		SET		PWD = #{pwd}
+		WHERE	EMAIL = #{email}
+	</update>
+	<update id="changeAuthCode"
+	    parameterType="com.abcfund.model.dto.ABCMemberDto">
+	    UPDATE	ABC_MEMBER
+	    SET		AUTH_CODE = #{authCode}
+	    WHERE	EMAIL = #{email}
+	</update>
+	<update id="changePwdOnAuth"
+	    parameterType="com.abcfund.model.dto.ABCMemberDto">
+	    UPDATE	ABC_MEMBER
+	    SET		PWD = #{pwd}
+	    WHERE	EMAIL = #{email} AND AUTH_CODE = #{authCode}
+	</update>
+</mapper>
