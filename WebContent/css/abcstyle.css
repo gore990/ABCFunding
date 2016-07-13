@@ -1,0 +1,150 @@
+
+
+/* 메인 화면 섹션 CSS */
+.invest-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 150px;
+   text-align: center;
+   background: #eee;
+}
+
+.loan-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 150px;
+   text-align: center;
+   background: #fff;
+}
+
+.sponsor-section {
+   height: 670px;
+   width: 1349px;;
+   padding-top: 150px;
+   text-align: center;
+   background: #eee;
+}
+
+.regiSuc-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 100px;
+   text-align: center;
+}
+
+
+
+
+
+/* 비밀번호 찾기 화면 CSS */
+.searchpwd-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 100px;
+   text-align: center;
+}
+
+.searchpwd-table {
+   margin: 0 auto;
+}
+
+.searchpwd-table tr td {
+   padding: 5px;
+}
+
+
+
+
+
+/* 비밀번호 변경 화면 CSS*/
+.changePwd-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 100px;
+   text-align: center;   
+}
+
+.changePwd-table {
+   margin: 0 auto;
+}
+
+.changePwd-table tr td{
+   padding: 5px;
+}
+
+#notCorrect {
+   color: red;
+}
+
+#correct {
+   color: blue;
+}
+
+
+
+
+/* 로그인 화면 CSS */
+.login-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 100px;
+   text-align: center;
+}
+
+.login-table {
+   margin: 0 auto;
+}
+
+.login-table tr td {
+   padding: 5px;
+}
+
+#login-button {
+   text-align: center;
+}
+
+#isFail {
+   color:red;
+}
+
+
+
+
+
+/* 회원가입 화면 CSS */
+.addmember-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 100px;
+   text-align: center;
+}
+
+.addmember-table {
+   margin: 0 auto;
+}
+
+.addmember-table tr td {
+   padding: 5px;
+}
+
+
+
+
+
+/* Footer CSS */
+footer {
+   display: block;
+   color: white;
+   margin: 0 auto;
+   height: 117px;
+   padding-top: 10px;
+   text-align: left;
+   background: #000;
+}
+
+.calcul-section {
+   height: 670px;
+   width: 1349px;
+   padding-top: 100px;
+   text-align: center;
+}
