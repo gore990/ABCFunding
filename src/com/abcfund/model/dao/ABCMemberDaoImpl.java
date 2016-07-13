@@ -29,12 +29,8 @@ public class ABCMemberDaoImpl implements ABCMemberDao {
 	}
 
 	@Override
-	public boolean login(ABCMemberDto dto) {
-		/* null이 반환되면 실패 */
-		Object obj = sqlSession.selectOne(nameSpace + "login", dto);
-		if (obj == null)
-			return false;
-		return true;
+	public ABCMemberDto login(ABCMemberDto dto) {
+		return (ABCMemberDto)sqlSession.selectOne(nameSpace + "login", dto);
 	}
 
 	@Override

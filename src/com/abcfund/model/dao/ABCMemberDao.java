@@ -10,7 +10,7 @@ import com.abcfund.model.dto.ABCMemberDto;
 public interface ABCMemberDao {
 	void addMemeber(ABCMemberDto dto);
 	void doAuthCode(ABCMemberDto dto);
-	boolean login(ABCMemberDto dto);
+	ABCMemberDto login(ABCMemberDto dto);
 	void changePwd(ABCMemberDto dto);
 	void changeAuthCode(ABCMemberDto dto);
 	void changePwdOnAuth(ABCMemberDto dto);

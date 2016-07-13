@@ -111,12 +111,13 @@ public class ABCMemberController {
 	@RequestMapping (value="loginAf.do", method = RequestMethod.POST)
 	public String loginAf(Model model, HttpServletRequest request ,ABCMemberDto dto) {
 		// 서버에 로그인 요청이 실패한 경우
-		if(!service.login(dto)) {
+		ABCMemberDto member = service.login(dto);
+		if(member == null) {
 			return "redirect:/login.do?isFail=true"; // 로그인 화면으로 다시 돌아간다.
 		}
 		
 		// 요청이 성공한 경우 세션 등록
-		request.getSession().setAttribute("login", dto);
+		request.getSession().setAttribute("login", member);
 		
 		/* 일반회원은 메인화면, 관리자는 관리자화면으로 간다. */
 		String tile = "redirect:/main.do";

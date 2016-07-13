@@ -62,7 +62,7 @@ public class ABCMemberServiceImpl implements ABCMemberService {
 	 * @return 로그인 성공시 true
 	 */
 	@Override
-	public boolean login(ABCMemberDto dto) {
+	public ABCMemberDto login(ABCMemberDto dto) {
 		return dao.login(dto);
 	}
 	
